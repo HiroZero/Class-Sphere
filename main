@@ -1,0 +1,58 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+
+class sphere {
+
+	private: //variables are private
+	int xpos;
+	int ypos;
+	int zpos;
+	int color;
+	int radius;
+public: //functions are public
+	void init(int x, int y, int z,char c, int r);
+	void volume();
+	void sa();
+};
+
+
+
+int main() {
+	int a, b, c, d, e;
+	sphere f;
+
+
+	cout << "Whats the x, y, z,and color and radius" << endl;
+	cin >> a;
+	cin >> b;
+	cin >> c;
+	cin >> d;
+	cin >> e;
+	f.init(a, b, c, d, e);
+	f.volume();
+	f.sa();
+	
+
+}
+
+void sphere:: init(int x, int y, int z, char c, int r) {
+	xpos = x;
+	ypos = y; //keep going
+	zpos = z;
+	color = c;
+	radius = r;
+
+}
+
+void sphere:: volume() {
+	cout << (4 / 3* (3.14)* (radius *radius*radius)) << endl;//look up formula
+
+}
+
+void  sphere::sa() {
+	cout << (4 * (3.14) * (radius * radius)) << endl;
+
+
+}
